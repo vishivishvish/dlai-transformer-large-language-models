@@ -86,3 +86,14 @@
 H- owever, the above method is still static in nature, and doesn’t take into account the contextualized & dynamic nature of how language is actually used. We shall look into contextualized representations in the next section.
 
 ## ***4 - Understanding Language Models: Encoding and Decoding Context with Attention***
+
+- In the previous section, we explored Word & Token embedding techniques, but with limited contextual capabilities.
+- In this section, we will explore how we can encode and decode context with attention.
+- Word2Vec and other such methods create static embeddings - the same embedding is generated for “apple” whether it appears in “Eat an apple every day” or “Apple launched a new iPhone yesterday” - which is obviously not ideal since "apple" refers to 2 different things above. 
+- For such words (and for all words really), their embeddings should have scope to change depending on the context (and the words they are surrounded by). Capturing this text context is in fact critical to perform certain tasks, such as Language Translation or Part-of-Speech Tagging.
+- The first kind of Neural Network architecture that was used to encode text in this manner was the Recurrent Neural Network (RNN) model. RNNs can be used to model sequences such as text.
+- To do this, typically RNNs were used to perform two tasks for text-to-text objectives such as Machine Translation - Encoding the input language text into representations, and Decoding the representations back into text in the output language. The Encoder would convert the entire sentence into an embedding, and the embedding would be used by the Decoder to generate the sentence in the output language.
+
+<img src="https://drive.google.com/uc?export=view&id=1Nto1QN9VQV42B5dKgc3-IAgK9mKLF8WH">
+
+- 
