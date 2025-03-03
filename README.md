@@ -1,4 +1,4 @@
-** Transformer Large Language Models **
+**Transformer Large Language Models**
 Deeplearning.ai 
 Andrew Ng - CEO, Deeplearning.ai
 Jay Alammar - Director & Engg Fellow, Cohere
