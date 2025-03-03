@@ -58,7 +58,7 @@
 - We start by assigning every word in the vocabulary a vector (of say 5 values), initialized with random values. 
 - Then, we take any pair of words from the training data, and a supervised objective is given to the Neural Network, where for example, it has to predict whether the two words are neighbors in a sentence or not.
 
-<img>
+<img src="https://drive.google.com/uc?export=view&id=1d879aylRVlTIHwWxMZGayzV5yqMrdZ_Y">
 
 - In this training process, Word2Vec learns the relationship between words, and distills that information into the embedding for that word.
 - If two words tend to have the same neighbor, their embeddings will be closer to each other, and vice-versa.
