@@ -96,4 +96,8 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 
 <img src="https://drive.google.com/uc?export=view&id=1Nto1QN9VQV42B5dKgc3-IAgK9mKLF8WH">
 
-- 
+- Each step in this architecture is autoregressive - when generating the next words, the architecture needs to consume all previously generated words.
+
+<img src="https://drive.google.com/uc?export=view&id=1nCCZomdCTtZId6VlryFVcVrsUL5LazJ6">
+
+
