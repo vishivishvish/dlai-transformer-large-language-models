@@ -46,8 +46,13 @@
 - Some of the tasks that have attempted to bring this structure are Text Generation, Text Embedding Creation and Text Classification.
 - The first method was by representing language as a Bag of Words.
 
+<img src="https://drive.google.com/uc?export=view&id=1ZmjoRqY_5a4sky0U_xmURntjnej_LdpC">
 
+- Dense vector embeddings, however, are more nuanced than the above simple vector representations of 1s and 0s, and cannot be intuited so easily - they rather have values between 0 and 1. We will look into these Vector Embeddings in the next section.
 
+## ***3 - Understanding Language Models: (Word) Embeddings***
+
+- 
 
 
 
