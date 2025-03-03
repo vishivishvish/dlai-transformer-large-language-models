@@ -124,3 +124,27 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 - The sequential nature of this architecture precludes parallelization during training of the model.
 
 ## ***5 - Understanding Language Models: Transformers***
+
+- In the previous section, we explored the main idea behind Attention.
+- In this section, we will understand how this technique was further developed and as of Feb’25, still powers modern-day Large Language Models.
+- The true power of Attention, in the way that it currently drives the abilities of LLMs, was explored in the paper “Attention is All You Need” in 2017. This paper introduced the “Transformer” architecture, a new architecture which was solely based on Attention and Feedforward Neural Networks, and did not require Recurrent Neural Networks.
+- This architecture also had the additional advantage that it could be trained in a parallel manner, which enabled a significant speedup of calculations compared to RNN-based models, that precluded parallelization.
+
+<img src="https://drive.google.com/uc?export=view&id=1BdKkB4_HTHw1SXfYkGwZ-wkLd-H_XL6H">
+
+- Let’s look at a high-level picture of how the Transformer works.
+- Assume you have the same input and output sequences as before.
+- The Transformer consists of stacked Encoder and Decoder blocks. These blocks have the same attention mechanism that we have previously seen. It’s just that by stacking these blocks, we amplify the strength of the Encoders and Decoders.
+- Let’s take a closer look at the Encoder.
+- The input “I love llamas” is converted into embeddings, but instead of Word2Vec, we can just initialize these embeddings with random values, because of the power of the eventual training process and the quality & quantity of training data in finding the right values for the embeddings.
+- Then, Self-Attention, which is Attention focused only on the input, processes these embeddings and updates them. These updated embeddings contain more contextualized information as a result of the Attention mechanism. They are passed to a Feedforward Neural Network, to finalize the contextual token word embeddings. 
+- All this is of course, only part of the Encoder, whose job is to find good representations for input word embeddings.
+
+<img src="https://drive.google.com/uc?export=view&id=1ubiSfQz67LSfiMRn-siX9kXoG7vG6_JH">
+
+- Self-Attention is an Attention mechanism, and instead of processing two separate sequences (input and output sequences), it processes only one sequence (only the input sequence), by comparing it to itself.
+- Now, after the Encoders are done processing the information, the next step is for the Decoder.
+
+<img src="https://drive.google.com/uc?export=view&id=1TdfLYVFAFgbfu_VpTUCFZSbaagZUF4TJ">
+
+- 
