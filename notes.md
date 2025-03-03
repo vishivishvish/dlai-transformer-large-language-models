@@ -1,6 +1,4 @@
-# **Transformer Large Language Models**
-
-**Deeplearning.ai**
+# **Transformer Large Language Models | Deeplearning.ai**
 
 **Andrew Ng - CEO, Deeplearning.ai**
 
@@ -113,3 +111,16 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 - In 2014, the idea of Attention was introduced, which was a big improvement over the original architecture.
 - Attention allows the model to focus on those parts of the input sequence which are relevant / attend to one another and amplify their signal. Attention determines which words are most important in a given sentence.
 
+<img src="https://drive.google.com/uc?export=view&id=1QV2uUeBIkMcTeIR3EBuaeHLCco8_RJXC">
+
+- By adding these Attention mechanisms to the Decoder step, the RNN can generate signals for each input word in the sequence related to the potential outputs.
+- In this Attention Encoder-Decoder process, we would again pass the Word2Vec embeddings of each input token to the Encoder, but from the Encoder, we would pass the hidden states of each input token now to the Decoder, as opposed to before when we passed only a single context embedding to the Decoder.
+- A stateful word is an internal vector from a hidden layer of an RNN that contains information about previous words.
+- The Decoder then uses the Attention mechanism to look at the entire sequence, and then generates the final language.
+- Due to this Attention mechanism, the output tends to be much better since you now look at the entire sequence using embeddings for each token or words instead of the smaller, more limited Context Embedding.
+
+<img src="https://drive.google.com/uc?export=view&id=1kQUrGv7a6fHGudDG8PM7HwdV6dtkXFp2">
+
+- The sequential nature of this architecture precludes parallelization during training of the model.
+
+## ***5 - Understanding Language Models: Transformers***
