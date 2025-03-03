@@ -64,7 +64,7 @@
 - If two words tend to have the same neighbor, their embeddings will be closer to each other, and vice-versa.
 - The resulting embeddings after this training process, tend to capture some amount of semantic meaning in words.
 
-<img>
+<img src="https://drive.google.com/uc?export=view&id=1SmHim-t4UN0UA6TujSNhuzGkT5qIPePM">
 
 - Each vector embedding has a certain fixed number of values in the vector (between -1 and 1), this number of values is called the dimensionality (or number of dimensions) of the vector.
 - We can interpret each of these values as the value that word scores on a particular property of that object - for example, if the first property captures whether the object is an animal or not, the word “cats” may have a high score (0.91) for that value in its embedding.
