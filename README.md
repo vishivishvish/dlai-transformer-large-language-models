@@ -39,7 +39,7 @@
 - In contrast, Decoder-based Transformer models are generative in nature, and their main objective is to generate high-quality text.
 - We also have Encoder-Decoder Transformer models, such as T5, Switch and Flan-T5, which attempt to get the best of both worlds.
 
-
+<img src="https://drive.google.com/uc?export=view&id=19YL6Lca_EA3Vw_QIzPAaAtmrSaypQa9f">
 
 
 
