@@ -100,4 +100,16 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 
 <img src="https://drive.google.com/uc?export=view&id=1nCCZomdCTtZId6VlryFVcVrsUL5LazJ6">
 
+- The autoregressive nature of the generation means the models generate one token at a time, dependent on the input tokens and all previously generated tokens.
+- To recap the Encoding-Decoding process, we first start with the input sentence, tokenized into tokens.
+- An embedding model like Word2Vec will be used to embed those tokens into embeddings, which will be the actual inputs to the model.
+- Although each of these embeddings is static by itself, the Encoder processes the entire input sequence, including all the embeddings, and takes into account the context of the embeddings.
+- The Encoder aims to represent the input as well as possible, and generates the context in the form of an embedding (a context embedding).
+- The Decoder leverages this context embedding and uses that to finally generate the outputs.
+
+<img src="https://drive.google.com/uc?export=view&id=1epHN4P9q6v3anv1xNPIK6SOEvsp9Uq0m">
+
+- This context embedding however, makes it difficult to deal with longer sequences, since it is merely a single embedding representing the entire input. So this single embedding might fail to capture the entire context of a long, complicated sequence.
+- In 2014, the idea of Attention was introduced, which was a big improvement over the original architecture.
+- Attention allows the model to focus on those parts of the input sequence which are relevant / attend to one another and amplify their signal. Attention determines which words are most important in a given sentence.
 
