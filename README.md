@@ -30,6 +30,16 @@
 
 ## ***2 - Understanding Language Models: Language as a Bag-of-Words***
 
+- In the next few videos, we will learn about the evolution of how language has been represented numerically.
+- We’ll start with Bag-of-Words, an algorithm that represents words as large sparse vectors, or arrays of numbers, which simply record the presence of words.
+- Then we’ll move to Word2Vec, whose vectors capture the meaning of words in the context of a few neighboring words.
+- Finally we’ll move to Transformers, whose dense vectors capture the meaning of words in the context of a sentence or a paragraph.
+- Although Bag-of-Words and Word2Vec lack contextualized representations, they are a good baseline to start with.
+- Encoder-based Transformer models (starting from BERT, DistilBERT and RoBERTA), have typically been very good at converting language into numerical representations.
+- In contrast, Decoder-based Transformer models are generative in nature, and their main objective is to generate high-quality text.
+- We also have Encoder-Decoder Transformer models, such as T5, Switch and Flan-T5, which attempt to get the best of both worlds.
+
+
 
 
 
