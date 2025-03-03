@@ -8,7 +8,9 @@
 
 **Maarten Grootendorst - Senior Clinical Data Scientist, IKNL**
 
-**Sunday, 02/23/2025**
+***Notes by Vishnu Subramanian - AI Researcher & Instructor, BloomTech***
+
+***Sunday, 02/23/2025***
 
 ## ***1 - Introduction***
 
