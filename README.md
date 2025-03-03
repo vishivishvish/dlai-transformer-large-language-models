@@ -17,7 +17,7 @@
 - But this same architecture turned out to be great for inputting a prompt (like an instruction) and outputting a response to that prompt / instruction, like a Q&A. 
 - The original Transformer architecture consisted of 2 parts - an Encoder and a Decoder.
 
-![Image 1](https://media.licdn.com/dms/image/D4D12AQEj4ADRPfqFyw/article-cover_image-shrink_720_1280/0/1701459621193?e=2147483647&v=beta&t=Lb-e_yR3Rb3DTWK5Ob0t5RXp6BoMiVHm8yGKVsLUvUI)
+![Image 1](https://drive.google.com/file/d/17RQl0vwEDuiC8ytLFWMIyHwYhi8-JxNE/)
 
 
 
