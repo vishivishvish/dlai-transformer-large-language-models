@@ -71,7 +71,7 @@
 - The number of dimensions in these vector embeddings is quite large, to give enough scope to capture semantic nuance of the word - it’s common to see dimension sizes in the thousands (ex: 1024 or 2048).
 - In practice, of course, we do not actually know what properties each value of the vector embedding actually represents. What we can do is, plot the vector embeddings of different words together, and we should be able to see that similar words must appear closer to each other in vector embedding space than they do to other words.
 
-<img>
+<img src="https://drive.google.com/uc?export=view&id=1EkqUekBMdlQZOjdxE0mhmveG3D1NiIGp">
 
 - Although we only covered Word Embeddings, there are actually many types of embedding models we can use.
 - When we talk about a model like Word2Vec, that converts textual input to embeddings, we refer to it as a representation model, as it attempts to represent text as values.
