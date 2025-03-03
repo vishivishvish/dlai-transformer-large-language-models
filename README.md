@@ -41,6 +41,12 @@
 
 <img src="https://drive.google.com/uc?export=view&id=19YL6Lca_EA3Vw_QIzPAaAtmrSaypQa9f">
 
+- Language is a tricky concept for computers. Text is unstructured, and loses its meaning when it’s represented by 1s and 0s.
+- As a result, in the history of language AI, there has been a focus on representing language in a structured manner, so that it can be more easily used by computers.
+- Some of the tasks that have attempted to bring this structure are Text Generation, Text Embedding Creation and Text Classification.
+- The first method was by representing language as a Bag of Words.
+
+
 
 
 
