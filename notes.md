@@ -1,4 +1,6 @@
-# **Transformer Large Language Models | Deeplearning.ai**
+# **Transformer Large Language Models 
+
+**[Deeplearning.ai](https://www.deeplearning.ai/short-courses/how-transformer-llms-work/)**
 
 **Andrew Ng - CEO, Deeplearning.ai**
 
