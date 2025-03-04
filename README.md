@@ -149,4 +149,18 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 
 <img src="https://drive.google.com/uc?export=view&id=1TdfLYVFAFgbfu_VpTUCFZSbaagZUF4TJ">
 
-***<WIP>***
+- The Decoder can take any previously generated words, and pass it to the masked self-attention, similar to the Encoder to process these embeddings.
+- Intermediate embeddings are generated and passed to another attention network together with the embeddings of the encoder, thus processing both what has been generated and what you already have. 
+- This output is passed to a Feedforward Neural Network, and finally generates the next word in the sequence. 
+
+<img src="https://drive.google.com/uc?export=view&id=1PFvmYPT3xQSSpbm5VJLRbOFhb4gVvDYT">
+
+- Masked self-attention is similar to self-attention, but removes all values from the upper diagonal.
+- Therefore it masks future positions, so that any given token can only attend to tokens that came before it.
+- The original Transformer architecture is an Encoder-Decoder architecture, which was suited towards Translation tasks, which was its original purpose, but cannot be used easily for other purposes such as Text Classification.
+- In 2018, a new architecture called Bidirectional Encoder Representations from Transformers (BERT) was introduced that could be leveraged for a wide variety of Encoder-oriented tasks, such as Classification and Semantic Search.
+- BERT was an Encoder-only architecture that focused on representing language well by generating contextual word embeddings.
+
+
+
+***WIP***
