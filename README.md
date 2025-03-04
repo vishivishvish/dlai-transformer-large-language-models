@@ -217,6 +217,21 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 
 <img src="https://drive.google.com/uc?export=view&id=1EU-zn_B2Z2Q1WXNhCuGMpanIE5CUDwTr">
 
-- 
+- Each piece is called a token, and the process of breaking down the text is called Tokenization.
+- Each token is then turned into a numerical representation, called an embedding. These are vector values that represent the semantic nature of a given text.
+- These embeddings are static, and each embedding is created independently from all other embeddings and tokens.
+
+<img src="https://drive.google.com/uc?export=view&id=18rX82y_ylrJ1vxeKEEWg4RkrBnHWqO5B">
+
+- These embeddings are processed by a Large Language Model, and converted into Contextualized Embeddings. 
+- These Contextualized Embeddings are still one for each input token, but they have been processed in such a way that all other tokens are also considered.
+
+<img src="https://drive.google.com/uc?export=view&id=1eoSGRj9qkMfuQvb20WXrtahoAwMMVhsd">
+
+- These embeddings can themselves be the output of a model (such as an Embedding Model like OpenAI’s Ada series), or they can be used by a model to then create outputs (such as for typical Autoregressive LLMs).
+- In the case of generative models, this can be another token.
+- Let’s explore in detail how the Tokenization process works.
+
+
 
 ***WIP***
