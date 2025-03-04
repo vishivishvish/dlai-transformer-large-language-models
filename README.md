@@ -161,6 +161,52 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 - In 2018, a new architecture called Bidirectional Encoder Representations from Transformers (BERT) was introduced that could be leveraged for a wide variety of Encoder-oriented tasks, such as Classification and Semantic Search.
 - BERT was an Encoder-only architecture that focused on representing language well by generating contextual word embeddings.
 
+<img src="https://drive.google.com/uc?export=view&id=144FWX_s8xNuA_BYr1tLCk0yTX-jeylzZ">
 
+- These Transformer Encoder blocks are the same as what we saw before. Self-Attention blocks, followed by Feedforward Neural Networks.
+- The input also contains a CLS token - classification token, which is used as a representation for the entire input.
+- Often, we use this CLS token as the input embedding for fine-tuning the model on specific tasks like Classification.
+- To train a BERT-like model, we can use a technique called Masked Language Modeling (MLM).
+
+<img src="https://drive.google.com/uc?export=view&id=1zt8iRhz0MQGtI-t6RZTcvhnToVEZ11LG">
+
+- First randomly mask a number of words from your input sequence. Then the training objective is for the model to predict these masked words.
+- By doing this, the model learns to predict language as it attempts to deconstruct the masked words. The process of learning to predict language teaches the BERT model how to represent language in a high-quality numerical representation (embedding).
+- Training BERT-like models is typically a two-step process.
+
+<img src="https://drive.google.com/uc?export=view&id=1OiDIBdadyINjLuLrWK8EZaE8Um7dmHjU">
+
+- First, we need to Pre-train it using MLM on a large dataset (such as the whole of Wikipedia). Then we need to fine-tune it on a number of downstream tasks such as Classification, Named Entity Recognition, Paraphrase Identification.
+- Autoregressive generative models, in contrast, use a slightly different architecture, where only the Decoder block is used, and the Encoder is not required.
+
+<img src="https://drive.google.com/uc?export=view&id=1h7WK9CxIGup6KvvjaiHxR529y9r8Jf9V">
+
+- Assume that you have an input sequence “I love” and randomly initialized embeddings. 
+- These input embeddings are passed to a stack of Transformer Decoders. Each Decoder consists of Masked Self-Attention and a Feedforward Neural Network. Finally the next word is generated “llamas”.
+- GPT-1 (Generative Pre-trained Transformer) from OpenAI was the first big implementation of this architecture, and scaling it up to GPT-2, GPT-3 and GPT-3.5 is what brought about the LLM revolution.
+- Decoder-only Autoregressive Generative Models and Encoder-only Representation Models are the two main flavors of Generative AI currently seen in Language AI.
+
+<img src="https://drive.google.com/uc?export=view&id=1Do2JvPGRLU-EUJ5gFt7rKVhTE1HThWTE">
+
+- These two flavors of Generative AI do have a common limitation - the Context Length.
+- We start from an input sequence, let’s say “Tell me something about Llamas.”, that we prompt the Generative model with in this instance. Let’s say the model has already started generating tokens in response - “Llamas are”. The original query plus the already-generated text equals the current context length (let’s say 8 tokens).
+
+<img src="https://drive.google.com/uc?export=view&id=1etGzXfdAhbJlYiaw3eDuGuThR0xSNVnl">
+
+- But any Generative LLM (such as OpenAI’s models) or even a representation model (such as OpenAI’s Ada models) can only have a maximum context length (such as 128k tokens). That means, the model can only process that many tokens at a given time.
+- This context length also includes every new token that is being generated at any given point of time, as well as all the input tokens and previously generated tokens that led to this new token generation.
+
+<img src="https://drive.google.com/uc?export=view&id=16--LJx-IcRwpf4bg4rhmkzkm3jP8Xsbr">
+
+- In terms of the number of parameters, GPT-1 already had > 100 million parameters.
+- GPT-2 was released in 2019 with around 1.5 billion parameters, and GPT-3 came out in 2020 with a massive 175 billion parameters.
+- As the number of parameters grew, so did the capabilities of OpenAI’s models, with some new, emergent capabilities only seemingly unlocked at a certain order of magnitude of scale.
+
+<img src="https://drive.google.com/uc?export=view&id=1Ekb7znVTzkOJcxl5g5L3VID1p94hB5WC">
+
+- OpenAI’s release of GPT-3.5 as the ChatGPT product at the end of 2022 kicked off an LLM race, with plenty of both Proprietary and Open-source / Open-weight competitors releasing very capable LLMs.
+- In the next lesson, we will learn about Tokenizers and Embeddings.
+
+## ***6 - Tokenizers***
 
 ***WIP***
