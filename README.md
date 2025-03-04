@@ -231,7 +231,18 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 - These embeddings can themselves be the output of a model (such as an Embedding Model like OpenAI’s Ada series), or they can be used by a model to then create outputs (such as for typical Autoregressive LLMs).
 - In the case of generative models, this can be another token.
 - Let’s explore in detail how the Tokenization process works.
+- Given an input sentence, it’s tokenized or encoded into smaller pieces.
+- Tokens can be entire words, or pieces of a word. 
+- This process is necessary as tokenizers have a limited vocabulary, so whenever it encounters an unknown word, it can potentially still be represented by these sub-word tokens.
 
+<img src="https://drive.google.com/uc?export=view&id=1DPy3q4HEbc5AkDZ-aRDnfi8V32aifMrg">
 
+- Each token has an associated fixed ID to easily encode and decode the tokens.
+- These are fed to the language model that internally creates the token embeddings.
+- The output of a generative model would then be another token ID, which is decoded to output an actual token.
+
+<img src="https://drive.google.com/uc?export=view&id=16giVUOV61QUlWt_IiAX4n_LZAlWKzihp">
+
+-
 
 ***WIP***
