@@ -209,4 +209,14 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 
 ## ***6 - Tokenizers***
 
+- In the previous lessons, we learned how word meaning was represented in vectors.
+- We briefly introduced “tokens” as words or word pieces.
+- In this lesson, we will illustrate what these tokens are, and how they help Transformers do their job.
+- Imagine you have a given input sentence “Have the bards who”.
+- For a language model to process that input text, it will first break down that text into smaller pieces.
+
+<img src="https://drive.google.com/uc?export=view&id=1EU-zn_B2Z2Q1WXNhCuGMpanIE5CUDwTr">
+
+- 
+
 ***WIP***
