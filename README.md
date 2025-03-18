@@ -245,4 +245,4 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 
 -
 
-***WIP - More Notes Incoming!***
+***WIP - More Notes Coming!***
