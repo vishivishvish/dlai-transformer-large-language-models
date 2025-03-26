@@ -8,7 +8,7 @@
 
 **Maarten Grootendorst - Senior Clinical Data Scientist, IKNL**
 
-***Notes by Vishnu Subramanian - AI/ML Computational Science Associate Manager - Accenture | AI Researcher & Instructor, BloomTech***
+***Notes by Vishnu Subramanian - AI/ML Computational Science Associate Manager, Accenture | AI Researcher & Instructor, BloomTech***
 
 ***Sunday, 02/23/2025 - Monday, 03/24/2025***
 
