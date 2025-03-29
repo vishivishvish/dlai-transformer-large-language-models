@@ -10,8 +10,6 @@
 
 ***Notes by Vishnu Subramanian - AI/ML Computational Science Associate Manager, Accenture | AI Researcher & Instructor, BloomTech***
 
-***Sunday, 02/23/2025 - Monday, 03/24/2025***
-
 ## ***1 - Introduction***
 
 - In this course, we will learn about the main components of the LLM Transformer architecture.
@@ -243,6 +241,6 @@ H- owever, the above method is still static in nature, and doesn’t take into a
 
 <img src="https://drive.google.com/uc?export=view&id=16giVUOV61QUlWt_IiAX4n_LZAlWKzihp">
 
--
+- 
 
 ***WIP - More Notes Incoming!***
