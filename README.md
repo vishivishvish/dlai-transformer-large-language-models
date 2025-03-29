@@ -37,7 +37,7 @@
 - Although Bag-of-Words and Word2Vec lack contextualized representations, they are a good baseline to start with.
 - Encoder-based Transformer models (starting from BERT, DistilBERT and RoBERTA), have typically been very good at converting language into numerical representations.
 - In contrast, Decoder-based Transformer models are generative in nature (which goes one step further than just converting language into numerical representations, as these representations then need to be converted back into new text). The main objective of generative Decoder-based Transformer models is to go that one step further and generate high-quality text.
-- We also have Encoder-Decoder Transformer models, such as T5, Switch and Flan-T5, which attempt to get the best of both worlds.
+- We also have Encoder-Decoder Transformer models, such as T5, Switch and Flan-T5, which attempt to get the best of both worlds, but which are currently not very popular (as of early 2025).
 
 <img src="https://drive.google.com/uc?export=view&id=19YL6Lca_EA3Vw_QIzPAaAtmrSaypQa9f">
 
