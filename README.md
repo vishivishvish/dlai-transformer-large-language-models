@@ -303,6 +303,33 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1Txr96dy1on67hYKPMNsy0almCo6a_gDJ">
 
-- 
+- The section on printing the colored list of tokens is the crux of the matter.
+- ‘idx’ and ‘t’ in the “for loop” means that we can loop over the lists of both the indices and the Token IDs.
+- While decoding each Token ID, we’re using ANSI escape codes to color the foreground and background of each token. The 0 represents the normal text style, the 30 represents the foreground color (black), the background color type is 48;2; and the specific background color comes from cycling through the earlier list of colors by using the modulo % operator, which cycles through a list of remainders of diving by the length of the colors list.
+- The piece of text we’ll run through the tokenizers is:
+
+`text = """`
+
+`English and CAPITALIZATION`
+
+`🎵 鸟`
+
+`show_tokens False None elif == >= else: two tabs:"    " Three tabs: "       "`
+
+`12.0*50=600`
+
+`""";`
+
+- We can now run this text through the show_tokens() function and see how each tokenizer splits this text into tokens.
+- For BERT-base-cased, we would do:
+
+`show_tokens(text, ‘bert-base-cased’)`
+
+<img src="https://drive.google.com/uc?export=view&id=1Txr96dy1on67hYKPMNsy0almCo6a_gDJ">
+
+
+
+
+
 
 ***WIP - More Notes Incoming!***
