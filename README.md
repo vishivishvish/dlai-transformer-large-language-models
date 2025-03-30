@@ -294,6 +294,15 @@
 
 - [CLS] and [SEP] are special tokens unique to the BERT tokenizer - they were arbitrarily chosen by BERT’s developers. [CLS] or the Classification Token represents the start of the entire input, and [SEP] or the Separation Token represents the end of a sentence.
 - Visually, it’s good to be able to use color highlights on our input sentence to see the split of how the tokenizer converts the input into individual tokens - this can be done with some simple functions.
+- First, let’s create a list of colors in RGB:
+  
+`colors = [‘102;194;165’, ‘252;141;98’, ‘141;160;203’, ‘231;138;195’, ‘166;216;84’, ‘255;217;47’];`
+
+- These RGB colors will help us differentiate the individual tokens in the text sequence.
+- Now, to print the list of colored tokens, this is the function we will create:
+
+<img src="https://drive.google.com/uc?export=view&id=1Txr96dy1on67hYKPMNsy0almCo6a_gDJ">
+
 
 
 ***WIP - More Notes Incoming!***
