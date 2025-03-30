@@ -325,10 +325,28 @@
 
 `show_tokens(text, ‘bert-base-cased’)`
 
-<img src="https://drive.google.com/uc?export=view&id=1Txr96dy1on67hYKPMNsy0almCo6a_gDJ">
+<img src="https://drive.google.com/uc?export=view&id=1RXBsm9x4Sau1l74OOByZRklVme_I_NLD">
 
+- We can see that the vocab size of this tokenizer is quite low, below 30k unique tokens.
+- This is why it needs as many as 49 tokens to represent this input - tokenizer vocabulary size is inversely proportional to the likely number of tokens required to represent a piece of text.
+- As we saw before, it starts with the [CLS] token and ends the sentence with [SEP].
+- This tokenizer, as we see, has a lot of difficulty representing the word “CAPITALIZATION” - it has to split it into 8 different tokens.
+- The hashtags at the start of some tokens simply represent that they, together with the token before, are part of the same word.
+- The [UNK] token is the unknown token, and is used when the Tokenizer doesn’t know how to represent any token.
+- Now let’s see how a more recent tokenizer differs from BERT-base-cased. Let’s use Xenova/gpt-4.
 
+`show_tokens(text, ‘Xenova/gpt-4’)`
 
+<img src="https://drive.google.com/uc?export=view&id=1J3uS8L4JLz55O2vBeGcp9b5_gzVitUGW">
+
+- The GPT-4 Tokenizer has a vocabulary size more than 3 times as large as the BERT-base-cased Tokenizer.
+- That means it should clearly need fewer tokens to represent the same string, and this is evident in the way the word “Capitalization” now needs only 2 tokens to represent it as opposed to 8.
+- This Tokenizer also doesn’t need any [CLS] and [SEP] tokens, because it’s meant purely for a generative model in GPT-4.
+- Because this tokenizer has a large vocabulary length, it’s easier to represent uncommon tokens, but there’s a tradeoff. 
+- The larger the tokenizer vocabulary size, the more embeddings need to be calculated for each of the tokens. So there’s a tradeoff between choosing a tokenizer with a million tokens, versus learning the representations for each of those tokens.
+- In the next section, we will see how LLMs process tokens in order to generate their output text.
+
+## ***7 - Architectural Overview***
 
 
 
