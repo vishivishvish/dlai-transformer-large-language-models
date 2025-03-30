@@ -267,7 +267,7 @@
   
 `sentence = ‘Hello world!’;`
 
-  `	token_ids = tokenizer(sentence).input_ids;`
+ `token_ids = tokenizer(sentence).input_ids;`
 
 - If you were to print these Token IDs, it would output a list of numerical values, like so:
 
@@ -278,7 +278,7 @@
   
 `for token_id in token_ids:`
 
-  `print(tokenizer.decode(token_id));`
+ `print(tokenizer.decode(token_id));`
   
 - This gives us:
   
