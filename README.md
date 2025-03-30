@@ -348,6 +348,16 @@
 
 ## ***7 - Architectural Overview***
 
+## ***8 - The Transformer Block***
 
+## ***9 - Self-Attention***
+
+## ***10 - Model Example***
+
+## ***11 - Recent Improvements***
+
+## ***12 - Mixture-of-Experts (MoE)***
+
+## ***13 - Conclusion***
 
 ***WIP - More Notes Incoming!***
