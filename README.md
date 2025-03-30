@@ -241,6 +241,7 @@
 
 <img src="https://drive.google.com/uc?export=view&id=16giVUOV61QUlWt_IiAX4n_LZAlWKzihp">
 
+- There are many different tokenization levels that we can explore.
 - 
 
 ***WIP - More Notes Incoming!***
