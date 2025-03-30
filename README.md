@@ -242,6 +242,56 @@
 <img src="https://drive.google.com/uc?export=view&id=16giVUOV61QUlWt_IiAX4n_LZAlWKzihp">
 
 - There are many different tokenization levels that we can explore.
-- 
+- Let’s say we have a text sequence “Have the ♫ bards who preceded”.
+- Words like “bards” and “preceded” might be represented by the tokenizer not as full words themselves (due to the relative rarity of their occurrence in the corpus), but rather as sub-word tokens, such as “b” + “ards” and “preced” + “ed”.
+- Although it’s possible to go right down to the character level itself to do tokenization, that leads to extremely long sequence lengths, which means in practice, most modern LLM tokenizers work at the sub-word level.
+
+<img src="https://drive.google.com/uc?export=view&id=13oF8IJIW3gLAkljxWME-qcqgH7d9gPp-">
+
+- To explore different tokenizers, we first need to install the transformers package with:
+
+`pip install transformers`
+
+- The transformers library is used not only to interact with Tokenizers but also to use LLMs.
+- First, we will need to import the AutoTokenizer sub-package from transformers, using:
+ 
+`from transformers import AutoTokenizer;`
+
+- This is used to interact with any tokenizer.
+- The tokenizer that we will be using is called the “BERT-base-cased” model (which basically means this is a version of BERT Base which recognizes case - the difference between uppercase and lowercase. This is a pre-trained Encoder model from the BERT family, first introduced by Google.
+- The tokenizer is loaded with the following command:
+  
+`tokenizer = AutoTokenizer.from_pretrained(‘bert-base-cased’);`
+
+- Now, once the tokenizer is loaded, it can be used to process the input sentence and extract Token IDs like so:
+  
+`sentence = ‘Hello world!’;`
+  `	token_ids = tokenizer(sentence).input_ids;`
+
+- If you were to print these Token IDs, it would output a list of numerical values, like so:
+
+`[101, 8667, 1362, 106, 102]`
+
+- We would need to decode these Token IDs in order to get the actual tokens.
+- There is a decode method in the tokenizer object that will allow us to loop through this list and decode the individual Token IDs:
+  
+`for token_id in token_ids:`
+  `print(tokenizer.decode(token_id));`
+  
+- This gives us:
+  
+`[CLS]`
+
+`Hello`
+
+`world`
+
+`!`
+
+`[SEP]`
+
+- [CLS] and [SEP] are special tokens unique to the BERT tokenizer - they were arbitrarily chosen by BERT’s developers. [CLS] or the Classification Token represents the start of the entire input, and [SEP] or the Separation Token represents the end of a sentence.
+- Visually, it’s good to be able to use color highlights on our input sentence to see the split of how the tokenizer converts the input into individual tokens - this can be done with some simple functions.
+
 
 ***WIP - More Notes Incoming!***
