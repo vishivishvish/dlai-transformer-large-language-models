@@ -266,6 +266,7 @@
 - Now, once the tokenizer is loaded, it can be used to process the input sentence and extract Token IDs like so:
   
 `sentence = ‘Hello world!’;`
+
   `	token_ids = tokenizer(sentence).input_ids;`
 
 - If you were to print these Token IDs, it would output a list of numerical values, like so:
@@ -276,6 +277,7 @@
 - There is a decode method in the tokenizer object that will allow us to loop through this list and decode the individual Token IDs:
   
 `for token_id in token_ids:`
+
   `print(tokenizer.decode(token_id));`
   
 - This gives us:
