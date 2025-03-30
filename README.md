@@ -303,6 +303,6 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1Txr96dy1on67hYKPMNsy0almCo6a_gDJ">
 
-
+- 
 
 ***WIP - More Notes Incoming!***
