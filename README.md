@@ -384,7 +384,7 @@
 - This is also the reason why when we use the same prompt repeatedly, we can get multiple answers that use words quite differently from each other.
 - Another important intuition about Transformers, which is why they operate better than previous ideas like RNNs, is that they process all of their input tokens in parallel, and this parallelization makes it time-efficient. So we can compute a long context on a lot of different GPUs at the same time.
 
-<img src="https://drive.google.com/uc?export=view&id=17szzk6TA8CqkBDwR16LTgIkj50qkLuNB">
+<img src="https://drive.google.com/uc?export=view&id=1vPCdpe48EPgifHvBMdhUS8i2EddBavoB">
 
 - The way to envision this is to think of multiple tracks flowing through this stack of Transformer blocks, and the number of tracks here is the context size of the model.
 - So if a model has a context size of 16,000 tokens, it can process 16,000 tokens at the same time.
