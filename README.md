@@ -403,6 +403,12 @@
 - Since the input words are “The Shawshank”, let’s think about the two tracks that are flowing through the stack of transformer blocks. 
 - In the beginning, our tokenizer has broken down the prompt into these two tokens.
 - “The” is its own token, and “Shawshank” is its own token.
+- We have the associated vector embeddings for both these tokens - that is what we will actually be calculating on.
+- Now that we have turned language into numbers, we can apply a lot of interesting calculus on them to try to predict the next word.
+- The embeddings first flow to the Transformer Block 1 - this generates vectors of the same size as the embeddings as its output.
+- But the Transformer Block 1 has performed some processing in the middle.
+- Before we get into that though, it’s useful to understand the general flow of data through the model.
+
 
 
 ## ***9 - Self-Attention***
