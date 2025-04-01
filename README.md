@@ -369,7 +369,30 @@
 
 - Since we’re looking at the high-level overview here, let’s look at the Language Modeling Head.
 
+<img src="https://drive.google.com/uc?export=view&id=1b4POBvVRnGfguuEVgqbbQ4mIGvtSDKVU">
 
+- At the end of the processing of a Language Model, what happens at the end is a kind of scoring or token probability calculation, based on all of the processing that the stack of transformers has done (to make sense of the input context, what is requested in the prompt, and the internal weights of the model), and hence what the next token should be in response to that.
+- So the result of the Language Modeling head is this sort of token probability scoring which says, for all the tokens I know, this is how much percent probability each of these tokens has, and all of these probabilities have to add up to 100%.
+- So if you have the word “Dear” scoring a 40% probability and becoming the highest probability token, that could possibly be used as your output. Not necessarily, but possibly, since there are also other more nuanced Decoding Strategies than just directly outputting the highest probability token.
+- This strategy of only selecting the highest probability token is called “Greedy Decoding” - it is what happens when we set the temperature of the LLM to 0.
+- But this is not the only method available.
+- Other strategies, such as “Top P Decoding”, are what happen when we set temperature > 0. It adds an element of randomness to the Decoding, it may still select the highest probability token, but in a few cases, it might select the next highest probability tokens too. It definitely looks at the scoring, but it doesn’t always have to pick the Top 1.
+
+<img src="https://drive.google.com/uc?export=view&id=12dUvSPqzZBiATfJBwS6ct8hFY8pZPOux">
+
+- This is important to generate text that sounds human / natural - human text has an element of randomness and an aversion to using the same words repeatedly, and that is what we’re trying to mimic with Top P Decoding.
+- This is also the reason why when we use the same prompt repeatedly, we can get multiple answers that use words quite differently from each other.
+- Another important intuition about Transformers, which is why they operate better than previous ideas like RNNs, is that they process all of their input tokens in parallel, and this parallelization makes it time-efficient. So we can compute a long context on a lot of different GPUs at the same time.
+
+<img src="https://drive.google.com/uc?export=view&id=17szzk6TA8CqkBDwR16LTgIkj50qkLuNB">
+
+- The way to envision this is to think of multiple tracks flowing through this stack of Transformer blocks, and the number of tracks here is the context size of the model.
+- So if a model has a context size of 16,000 tokens, it can process 16,000 tokens at the same time.
+- The generated output token in Decoder-only Transformers, is the output of the final token in the model. 
+- Remember that every time we generate a new token, that new token together with all earlier tokens within the context size, are used back to generate the next new tokens. Also, that means all the earlier calculations can be cached, since they would be exactly the same anyway, so we can cache them to speed up the generation of every new token
+- This is referred to as “KV-Caching”.
+- There’s an important metric used to gauge Transformer performance efficiency, called “Time to First Token”, which is how long the model takes to process all of this to generate the first token.
+- Generating every other token is a slightly different process.
 
 ## ***8 - The Transformer Block***
 
