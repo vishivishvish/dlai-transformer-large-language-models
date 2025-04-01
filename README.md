@@ -408,7 +408,15 @@
 - The embeddings first flow to the Transformer Block 1 - this generates vectors of the same size as the embeddings as its output.
 - But the Transformer Block 1 has performed some processing in the middle.
 - Before we get into that though, it’s useful to understand the general flow of data through the model.
+- The same thing happens with Transformer Block 2, which operates on the outputs of Transformer Block 1, in parallel across the multiple tracks.
+- This happens down the list of Transformer Blocks all the way to the end.
+- In the final layer, the vector for the final token in the prompt is presented to the Language Modeling head, which outputs or generates the next token.
+- This is the flow - everything flows from the beginning to the end in one direction - from the tokenizer down the Transformer blocks, one-by-one in sequence up until the Language Modeling head.
+- The Transformer block itself is made up of two major components - the Self-Attention Layer and the Feedforward Neural Network. 
 
+<img src="https://drive.google.com/uc?export=view&id=1eXejTASUIxeYxxzZOMru3-cKQP5Pt0cn">
+
+- 
 
 
 ## ***9 - Self-Attention***
