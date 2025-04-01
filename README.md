@@ -396,6 +396,15 @@
 
 ## ***8 - The Transformer Block***
 
+- We have learned that after tokenization, the tokens are passed through a stack of Transformer blocks. Let's get into the details of those blocks.
+
+<img src="https://drive.google.com/uc?export=view&id=1bOAaG89XwfJivgdE1c1vtRFxtaAOWy_0">
+
+- Since the input words are “The Shawshank”, let’s think about the two tracks that are flowing through the stack of transformer blocks. 
+- In the beginning, our tokenizer has broken down the prompt into these two tokens.
+- “The” is its own token, and “Shawshank” is its own token.
+
+
 ## ***9 - Self-Attention***
 
 ## ***10 - Model Example***
