@@ -427,4 +427,4 @@
 
 ## ***13 - Conclusion***
 
-***WIP - More Notes Incoming!***
+***WIP - More Notes Coming!***
