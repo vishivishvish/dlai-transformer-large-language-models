@@ -463,6 +463,11 @@
 
 <img src="https://drive.google.com/uc?export=view&id=15OVEF-HPlNlLJJhQMebcoUm2dsAkAeLQ">
 
+- We have the token that we’re currently processing, and then we have the other positions in the sequence. These are the vector representations of the other tokens that precede this token.
+- Self-Attention is conducted using three matrices - the Query Projection Matrix, the Key Projection Matrix and the Value Projection Matrix. 
+
+<img src="https://drive.google.com/uc?export=view&id=13B01OLOilPjL6yYBoLk5XOu3Jad4HYuN">
+
 - 
 
 
