@@ -453,8 +453,18 @@
 - So at a high level, this is what self-attention boils down to - Relevance Scoring and combining information from the relevant tokens into the current vector that we’re processing and representing.
 - In the next section, we’ll look into further details of how that’s done.
 
-
 ## ***9 - Self-Attention***
+
+- Self-Attention is a key component in the Transformer block.
+- As we’ve learned, it consists of two steps - Relevance Scoring and Combining Information.
+- We’ll now take a closer look at how these are calculated, and how that has evolved in recent years to enable more efficient attention.
+- Self-Attention happens within what we call an Attention Head.
+- Let’s assume we only have one of these Attention Heads right now, that we’re using to process Self-Attention.
+
+<img src="https://drive.google.com/uc?export=view&id=15OVEF-HPlNlLJJhQMebcoUm2dsAkAeLQ">
+
+- 
+
 
 ## ***10 - Model Example***
 
