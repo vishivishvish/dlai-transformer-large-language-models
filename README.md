@@ -424,6 +424,9 @@
 
 46 - https://drive.google.com/file/d/1oM7K_2tEhPG8V3edmwh7m6jSBvABpTuy/view?usp=sharing
 
+47 - https://drive.google.com/file/d/1jRdOHce8iidDatNK7mG5eEXKQXzuRzXC/view?usp=sharing
+
+
 
 
 ## ***9 - Self-Attention***
