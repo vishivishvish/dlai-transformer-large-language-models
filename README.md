@@ -416,17 +416,42 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1eXejTASUIxeYxxzZOMru3-cKQP5Pt0cn">
 
+- We can think of the Feedforward Neural Network as a module for storage of information statistics about what words are likely to come next after the input token.
+- This contrasts it with the Self-Attention module.
 
+<img src="https://drive.google.com/uc?export=view&id=1ESXESGat-ZFInakCWWMHQjy3cjiuLqlW">
 
-44 - https://drive.google.com/file/d/1OKQhdrLvCc4yA4pbVH_u_6ickJLgzhc1/view?usp=sharing
+- A Feedforward Neural Network usually looks like this, with layers usually expanding before contracting, to give the network information bandwidth / high-dimensional space to expand its knowledge into, before it has to compress it down to the final output dimensions.
+- That’s exactly what happens in the Feedforward Neural Network in the Transformer as well. The connections inside the Dense Model is presumably where all the information that models know is stored and modeled and interpreted and interpolated between to enable the models to do the incredible things they can, to generate code, encode information about the world, and speak to you in a fluent and coherent language of your choosing.
 
-45 - https://drive.google.com/file/d/1ne8dgEYAjQGD3v-K27ZJBCwYZzYJqu8L/view?usp=sharing
+<img src="https://drive.google.com/uc?export=view&id=1OKQhdrLvCc4yA4pbVH_u_6ickJLgzhc1">
 
-46 - https://drive.google.com/file/d/1oM7K_2tEhPG8V3edmwh7m6jSBvABpTuy/view?usp=sharing
+- Self-Attention on the other hand, allows models to attend to previous tokens, and incorporate the context in its understanding of the token it’s currently looking at.
+- Let’s say we have a prompt: “The dog chased the llama because it” - when the model is processing these words, it has to bake in some information from these words to understand what “it” is referring to - does “it” refer to the dog or the llama?
 
-47 - https://drive.google.com/file/d/1jRdOHce8iidDatNK7mG5eEXKQXzuRzXC/view?usp=sharing
+<img src="https://drive.google.com/uc?export=view&id=1ne8dgEYAjQGD3v-K27ZJBCwYZzYJqu8L">
 
+- It’s important for the model to understand what that “it” refers to, and that’s a little bit of what self-attention refers to.
+- It enables the model to bake in some of that representation of the llama tokens, for example. If the previous context points towards “it” referring to the llama, self-attention allows the model to bake in some of that representation of the llama into it.
+- This is an NLP task called “Coreference Resolution”, and if these are the only words presented to you, it would be difficult to discern if “it” refers to the dog or to the llama.
+- But in this example, let’s assume that previous tokens in the prompt indicate that “it” is the llama.
+- So to understand attention at a high level, let’s formulate it like this:
 
+<img src="https://drive.google.com/uc?export=view&id=1oM7K_2tEhPG8V3edmwh7m6jSBvABpTuy">
+
+- So we have other positions in the sequence - previous tokens that we’ve processed in the past.
+- Then we have the current position that we’re processing.
+- We have its current vector representation (current position information).
+- As this current vector representation passes through the Self-Attention module, it gets enriched with context information from other positions - assuming we’re pulling in the right information from the other tracks, that is useful to represent this token in this step.
+- This is a high-level formulation of what self-attention does, we’ll get into more of the specifics in the next lesson.
+- But what Self-Attention does is two things.
+
+<img src="https://drive.google.com/uc?export=view&id=1jRdOHce8iidDatNK7mG5eEXKQXzuRzXC">
+
+- The first thing is Relevance Scoring - it assigns a score to how relevant each of the input tokens are to the token we’re currently processing.
+- The second step is, after scoring that relevance, it combines the relevant information into the representation.
+- So at a high level, this is what self-attention boils down to - Relevance Scoring and combining information from the relevant tokens into the current vector that we’re processing and representing.
+- In the next section, we’ll look into further details of how that’s done.
 
 
 ## ***9 - Self-Attention***
