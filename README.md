@@ -420,6 +420,8 @@
 
 https://drive.google.com/file/d/1OKQhdrLvCc4yA4pbVH_u_6ickJLgzhc1/view?usp=sharing
 
+https://drive.google.com/file/d/1ne8dgEYAjQGD3v-K27ZJBCwYZzYJqu8L/view?usp=sharing
+
 ## ***9 - Self-Attention***
 
 ## ***10 - Model Example***
