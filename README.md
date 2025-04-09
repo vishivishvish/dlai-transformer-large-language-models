@@ -416,7 +416,9 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1eXejTASUIxeYxxzZOMru3-cKQP5Pt0cn">
 
-- 
+
+
+https://drive.google.com/file/d/1OKQhdrLvCc4yA4pbVH_u_6ickJLgzhc1/view?usp=sharing
 
 ## ***9 - Self-Attention***
 
