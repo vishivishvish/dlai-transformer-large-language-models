@@ -501,6 +501,17 @@
 - Once we have all the Weighted Values, we just sum them up.
 - That is the output of this second Information Combination step.
 
+<img src="https://drive.google.com/uc?export=view&id=1sulmYfie5uCXk0oZoxqIHNcAvPiEMIbw">
+
+<img src="https://drive.google.com/uc?export=view&id=1bLgnJXC2lMhsCocRK3jX9tTRAuXit13M">
+
+- As mentioned before, that calculation happens within an attention head.
+- But in Self-Attention, that same operation happens in parallel, in multiple attention heads.
+- Each attention head has its own set of Key, Query and Value Weight Matrices, so the attention that we assign to the various vectors is different.
+- So we can think about two components of Self-Attention - splitting into various Attention Heads, and then combining the information from all the Attention Heads back together to form this output of the Self-Attention layer.
+- It’s also important to visualize the Key, Query and Value matrices.
+- Each one of the Attention Heads has its own set of Projection Matrices for Keys, Queries and Values.
+- And now that we have this visual, we can talk about more recent forms of Attention, that power modern Transformer-based Large Language Models.
 
 
 
