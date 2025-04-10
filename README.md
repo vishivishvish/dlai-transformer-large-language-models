@@ -468,7 +468,7 @@
 
 <img src="https://drive.google.com/uc?export=view&id=13B01OLOilPjL6yYBoLk5XOu3Jad4HYuN">
 
-- 
+- For Transformers, Keys, Queries and Values are important concepts.
 
 
 ## ***10 - Model Example***
