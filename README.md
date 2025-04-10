@@ -492,8 +492,15 @@
 - We multiply the Queries Vector associated with the current token with the Keys vectors that represent the previous tokens.
 - This is a high-level intuition, but to know more about how Attention is calculated and implemented, the follow-up course from Deeplearning.ai and StatQuest on “Attention in Transformers with PyTorch”, by Josh Starmer and Andrew Ng, is entirely devoted to the calculation and implementation of Attention.
 
+<img src="https://drive.google.com/uc?export=view&id=1lhuc5HJNk7A-KSGpGTbDbkrrKM3Bd3W0">
 
-![image](https://github.com/user-attachments/assets/4774f9d1-f53c-4f43-99db-e2ed386edbbc)
+- And then, now that we have the Relevance Scores, we can start with the second step, which is, combining information from the relevant tokens, that is done using the Values vectors associated with each of these tokens. Each token has a Values vector associated with it.
+- We just multiply the score of each token, by the Value vector.
+- That gives us these Weighted Values, where “The” and “dog” have the highest value.
+- The other values in the Weighted Values section will be closer to zero, because we’re multiplying them by smaller numbers.
+- Once we have all the Weighted Values, we just sum them up.
+- That is the output of this second Information Combination step.
+
 
 
 
