@@ -1,4 +1,4 @@
-# **Transformer Large Language Models** 
+![image](https://github.com/user-attachments/assets/25026cf1-3c43-455f-b427-aba097aa6b2d)# **Transformer Large Language Models** 
 
 **[Deeplearning.ai](https://www.deeplearning.ai/short-courses/how-transformer-llms-work/)**
 
@@ -491,6 +491,9 @@
 - Technically how this is done, is by Matrix Multiplication.
 - We multiply the Queries Vector associated with the current token with the Keys vectors that represent the previous tokens.
 - This is a high-level intuition, but to know more about how Attention is calculated and implemented, the follow-up course from Deeplearning.ai and StatQuest on “Attention in Transformers with PyTorch”, by Josh Starmer and Andrew Ng, is entirely devoted to the calculation and implementation of Attention.
+
+
+![image](https://github.com/user-attachments/assets/4774f9d1-f53c-4f43-99db-e2ed386edbbc)
 
 
 
