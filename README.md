@@ -486,6 +486,12 @@
 - In this case, let’s say we have “The” and “dog” which have the highest Relevance Score. So more of those tokens will be baked into the enriched vector representation that contains the contextual information from other positions, which we see in the end of the above diagram.
 - This is the end of the Relevance Scoring stage. We obtain scores for each token and they add up to 100%.
 
+<img src="https://drive.google.com/uc?export=view&id=1BeT_U0NeRNcR1IaX5AEPaOwwWnDVwTqs">
+
+- Technically how this is done, is by Matrix Multiplication.
+- We multiply the Queries Vector associated with the current token with the Keys vectors that represent the previous tokens.
+- This is a high-level intuition, but to know more about how Attention is calculated and implemented, the follow-up course from Deeplearning.ai and StatQuest on “Attention in Transformers with PyTorch”, by Josh Starmer and Andrew Ng, is entirely devoted to the calculation and implementation of Attention.
+
 
 
 ## ***10 - Model Example***
