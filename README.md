@@ -469,6 +469,13 @@
 <img src="https://drive.google.com/uc?export=view&id=13B01OLOilPjL6yYBoLk5XOu3Jad4HYuN">
 
 - For Transformers, Keys, Queries and Values are important concepts.
+- In this calculation, we will get a sense of what each of them is used for.
+- These weight matrices are used to calculate query, key and value matrices.
+- And through some interaction that we will discuss, we can go about scoring the relevance and then combining the information.
+
+<img src="https://drive.google.com/uc?export=view&id=1g4Nq2Rv1LdDEh2lan-b8_A9DZZ_hmImt">
+
+- 
 
 
 ## ***10 - Model Example***
