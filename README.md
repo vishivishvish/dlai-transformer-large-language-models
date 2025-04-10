@@ -475,7 +475,17 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1g4Nq2Rv1LdDEh2lan-b8_A9DZZ_hmImt">
 
-- 
+- Let’s say on the Query side, we have a vector representation that represents the current token / current position.
+- And in the “Previous tokens” portion before the “Current token”, let’s say each row of that matrix represents a vector pertaining to one of the previous tokens before the current token.
+- And the same thing is done with Keys and Values.
+
+<img src="https://drive.google.com/uc?export=view&id=1HDpFYPK7TOrgg_kOOdbD-mjwQRfN7Xc4">
+
+- The end goal of Relevance Scoring is something like the above figure.
+- Every token we have is assigned a score showing how relevant the token is, to the token we’re currently representing.
+- In this case, let’s say we have “The” and “dog” which have the highest Relevance Score. So more of those tokens will be baked into the enriched vector representation that contains the contextual information from other positions, which we see in the end of the above diagram.
+- This is the end of the Relevance Scoring stage. We obtain scores for each token and they add up to 100%.
+
 
 
 ## ***10 - Model Example***
