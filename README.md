@@ -515,7 +515,18 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1F8OqzpplOfiFDbKTcapSDU6uIERYTOvx">
 
-- 
+- To make self-attention more efficient, as this is one of the steps that takes the longest and takes the most computational time in Transformers, one idea that was proposed to make attention more efficient, was the idea of Multi-Query Attention (MQA), by Noam Shazeer (one of the original inventors of the Transformer) in 2019.
+- The idea was that each Attention Head doesn’t need to have its own separate Keys and Values.
+- Let’s have them all share the same Keys matrix & Values matrix.
+- So we only have one for the entire layer - one set of these two projection matrices.
+- We can think of this as some sort of compression - we have a smaller number of parameters now, and this helps models calculate Self-Attention faster during inference decoding. 
+- So MQA helps improve the inference speed for Transformers, as it reduces the memory requirements of loading Key-Value Tensors during incremental decoding.
+- However MQA’s drawback is that while it improves decoding efficiency, it can lead to quality degradation in the Transformer’s outputs.
+
+
+
+<img src="https://drive.google.com/uc?export=view&id=1ZTDzZ7XYV_Olc2ItGP6U9Hg89rGCTuNo">
+
 
 ## ***10 - Model Example***
 
