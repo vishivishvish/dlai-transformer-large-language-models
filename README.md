@@ -513,7 +513,9 @@
 - Each one of the Attention Heads has its own set of Projection Matrices for Keys, Queries and Values.
 - And now that we have this visual, we can talk about more recent forms of Attention, that power modern Transformer-based Large Language Models.
 
+<img src="https://drive.google.com/uc?export=view&id=1F8OqzpplOfiFDbKTcapSDU6uIERYTOvx">
 
+- 
 
 ## ***10 - Model Example***
 
