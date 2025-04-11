@@ -532,9 +532,14 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1_UQpwMHQEVic_Mrnjj3_fDl8rz5yYOc4">
 
-- 
+- Another important recent idea for improving the efficiency of attention is the idea of Sparse Attention.
+- This usually does not happen in all the layers.
+- Let’s say the first layer has Self-Attention, in the way that’s displayed in the diagram, where Token Number Seven, as we’re processing it, is able to attend to all of the tokens that preceded it (Global Autoregressive Self-Attention).
+- In larger and larger models, that becomes a little bit too expensive, if you allow that to happen at every layer.
+- So we start to see that maybe interleaved, like Layers 2, 4 and 6 for example, are not able to attend to all of the tokens in the history, but maybe only to the last 4 or 6 or 32 tokens.
+- This idea is referred to as Sparse Attention.
 
-- 
+
 
 ## ***10 - Model Example***
 
