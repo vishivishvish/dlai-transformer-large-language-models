@@ -522,11 +522,19 @@
 - We can think of this as some sort of compression - we have a smaller number of parameters now, and this helps models calculate Self-Attention faster during inference decoding. 
 - So MQA helps improve the inference speed for Transformers, as it reduces the memory requirements of loading Key-Value Tensors during incremental decoding.
 - However MQA’s drawback is that while it improves decoding efficiency, it can lead to quality degradation in the Transformer’s outputs.
-
-
+- More recently, Grouped Query Attention (GQA), proposed by another team at Google in 2023, is another efficient Attention mechanism that allows us to use multiple Keys and Values, but not as large as the number of Attention Heads (n_attention_heads). This smaller number is what we refer to in the below diagram as n_groups. 
 
 <img src="https://drive.google.com/uc?export=view&id=1ZTDzZ7XYV_Olc2ItGP6U9Hg89rGCTuNo">
 
+- This leads to better results than when we just shared one set of Keys and Values across all Attention Heads.
+- GQA was especially important for larger Language Models (post-2022), which required more of those parameters to represent the data that is required to really do Self-Attention on very large training datasets.
+- Now when we read papers that describe the architecture of the model that was trained, if they use some form of GQA, they will mention not only the number of Attention Heads they used but also the number of Groups of Keys and Values they used.
+
+<img src="https://drive.google.com/uc?export=view&id=1_UQpwMHQEVic_Mrnjj3_fDl8rz5yYOc4">
+
+- 
+
+- 
 
 ## ***10 - Model Example***
 
