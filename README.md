@@ -539,6 +539,16 @@
 - So we start to see that maybe interleaved, like Layers 2, 4 and 6 for example, are not able to attend to all of the tokens in the history, but maybe only to the last 4 or 6 or 32 tokens.
 - This idea is referred to as Sparse Attention.
 
+<img src="https://drive.google.com/uc?export=view&id=1faolEhDXVQc2IGt6_VDxzpnueJO5dIJK">
+
+- One way to think about it is - if we were to set up some visual language, let’s say we have the token “the” - we’re processing it now and it’s the first token, so we can’t really attend to any previous tokens.
+- But let’s say the second token is “dog”. So “dog” can attend to both “the” and “dog”. 
+- Then we have “chased” - the third token. That is able to attend to three tokens.
+- Now, this is just to set up the visual language for figures like the below one, which describes what Sparse Attention looks like.
+
+<img src="https://drive.google.com/uc?export=view&id=1ZH5QiK7ePYc9A5N_79MtAomezt-ABF1x">
+
+- 
 
 
 ## ***10 - Model Example***
