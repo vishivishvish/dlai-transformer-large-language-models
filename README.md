@@ -555,9 +555,11 @@
 - So Fixed Sparse Attention is a combination of only attending to tokens from the fourth token onwards, in addition to allowing solely every fourth previous token as well.
 - These Sparse Attention ideas were introduced by a team led by Alec Radford and Ilya Sutskever from OpenAI in 2019.
 - More recently, to allow models to go through Long Context inputs of 100k or even 1 million+ tokens, ideas like Ring Attention have been introduced.
+- The blog post at Coconut-Mode (https://coconut-mode.com/posts/ring-attention/) is a good visual explanation for how Ring Attention works.
 
 <img src="https://drive.google.com/uc?export=view&id=1Y8WS2vof-Wir1G3pAHhjU2EGJnNeD4EG">
 
+- 
 
 ## ***10 - Model Example***
 
