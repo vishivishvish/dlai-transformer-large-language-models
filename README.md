@@ -548,7 +548,15 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1ZH5QiK7ePYc9A5N_79MtAomezt-ABF1x">
 
-- 
+- In full attention, every token can attend to every previous token.
+- So each row can be thought of as a new token, and hence a step in processing.
+- But Sparse Attention can be, for example, strided - where at each position, we look back at a fixed number of immediate previous tokens (let’s say 3 or 4), but we also look back at every 4th token before the earliest such immediately previous token. So for example, in the last row in the Strided Sparse Attention, when we’re processing the 16th Token, we attend to the 13th, 14th and 15th Tokens, but we also attend to Tokens 12, 8 and 4.
+- Another variant is Fixed Sparse Attention, where for example after you reach every 4th token, you’re only allowed to attend to tokens from that token onwards in future processing steps, but you can still attend to all the 4th previous tokens as well. So for example, when processing Token 8, we can attend to Tokens 4-7. But when processing Token 9, we can only process Token 8 and Token 4. 
+- So Fixed Sparse Attention is a combination of only attending to tokens from the fourth token onwards, in addition to allowing solely every fourth previous token as well.
+- These Sparse Attention ideas were introduced by a team led by Alec Radford and Ilya Sutskever from OpenAI in 2019.
+- More recently, to allow models to go through Long Context inputs of 100k or even 1 million+ tokens, ideas like Ring Attention have been introduced.
+
+<img src="https://drive.google.com/uc?export=view&id=1Y8WS2vof-Wir1G3pAHhjU2EGJnNeD4EG">
 
 
 ## ***10 - Model Example***
