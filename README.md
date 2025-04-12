@@ -555,11 +555,36 @@
 - So Fixed Sparse Attention is a combination of only attending to tokens from the fourth token onwards, in addition to allowing solely every fourth previous token as well.
 - These Sparse Attention ideas were introduced by a team led by Alec Radford and Ilya Sutskever from OpenAI in 2019.
 - More recently, to allow models to go through Long Context inputs of 100k or even 1 million+ tokens, ideas like Ring Attention have been introduced.
-- The blog post at Coconut-Mode (https://coconut-mode.com/posts/ring-attention/) is a good visual explanation for how Ring Attention works.
+- The blog post at [Coconut-Mode](https://coconut-mode.com/posts/ring-attention/) is a good visual explanation for how Ring Attention works.
 
 <img src="https://drive.google.com/uc?export=view&id=1Y8WS2vof-Wir1G3pAHhjU2EGJnNeD4EG">
 
-- 
+- Now that we have made it this far, having seen a lot of visual language for representing ideas in Transformers, when we are reading a paper like the [Llama 3.1 Technical Report](https://arxiv.org/abs/2407.21783), we should be able to mentally picture the architecture choices made by the Meta team for their Llama 3.1 models.
+
+<img src="https://drive.google.com/uc?export=view&id=1s13vvITTIDl3kmcOePRUCqtKqaDAp5-d">
+
+- The 8B model, for example, has 32 layers. That basically refers to 32 Transformer blocks.
+
+<img src="https://drive.google.com/uc?export=view&id=1DjZYUhwXvILpj1SM11CmwrRFUduL0XDd">
+
+- It has a 4096 model dimension. That is the dimension length of the vector that flows through the Transformer.
+
+<img src="https://drive.google.com/uc?export=view&id=1pxWx6Ufk5DXKq7pnoNkd9taRGMG_87VK">
+
+- The Feedforward Neural Network has a dimension of 14,336. That refers to how many units there are in the middle layer of the Feedforward Neural Network.
+
+<img src="https://drive.google.com/uc?export=view&id=1eSNCJmOueDwSiUQkiQHr3UXhnsTCquYm">
+
+- The model has 32 Attention Heads, and 8 Key-Value Heads for the Grouped Query Attention.
+
+<img src="https://drive.google.com/uc?export=view&id=19iBez63FqyzT0JUpWiolITcHbxg81K8t">
+
+- The vocabulary size of 128,000 means that the model can output one out of 128k tokens at each generation step, based on the probability scores it generates for them.
+
+<img src="https://drive.google.com/uc?export=view&id=1mV6XRR5FckdeWe39SqTCudZU1VhOHSxd">
+
+
+
 
 ## ***10 - Model Example***
 
