@@ -1,4 +1,4 @@
-# **Transformer Large Language Models** 
+![image](https://github.com/user-attachments/assets/d586a49c-1d1e-443f-8bb9-a3c1287919a6)# **Transformer Large Language Models** 
 
 **[Deeplearning.ai](https://www.deeplearning.ai/short-courses/how-transformer-llms-work/)**
 
@@ -612,6 +612,17 @@
 - When the model is running on CPUs, it may take a few minutes to generate the response.
 - This is why, for example, in the industry a lot of these models run on inference-optimized GPUs.
 - A lot of the efficiency-oriented methods we’ve discussed are important in speeding up the text generation process - hence the focus on efficiency in research and in industry.
+- Now that we’ve loaded the model in Hugging face, we can actually just print it out to try and understand its architecture.
+
+<img src="https://drive.google.com/uc?export=view&id=1KaIZ9jySz0E0M0tmr1YSq2K-e5S_HP34">
+
+- We can see that the output is indented, that shows us the hierarchy of the model.
+- First we have the model, which is the Phi 3 model for Causal Language Modeling - this is housed in an instance of the Phi3ForCausalLM() object.
+- The Causal or Autoregressive nature of the language model means that the attention only focuses on the previous tokens.
+- Inside, we have two major components - the (model) itself, which is where all of the (layers) / the Transformer Blocks sit. 
+- We have the Tokens - the (embed_tokens) - also referred to as the Tokens Matrix, which is a matrix whose rows are each unique token (the token vocabulary size of 32064 in this model), and the columns are the dimensions of the embedding of each token (3072 dimensions here).
+- Inside (layers), we see that there are 32 Decoder Transformer layers, and we can see the exact component of each of them.
+
 
 
 
