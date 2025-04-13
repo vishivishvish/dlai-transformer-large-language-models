@@ -592,6 +592,17 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1JR3TtzXy5leNlykkSmaEO91z9c1hTjuR">
 
+- In this code, we will be downloading the model together with its tokenizer.
+- When we load it on a CPU, we may get a couple of warnings, but those can be ignored.
+- Now we can create a Hugging Face Pipeline, by specifying the tokenizer and the model we’ve downloaded. The “Pipeline” is just a crude abstraction that makes it easier to generate code within the LLM, after we give it up and load the model and tokenizer.
+- In the code below, we’re saying that whenever we give the system a prompt, we want it to generate 50 tokens in response to that.
+- The do_sample parameter being set to False, means that we’re doing Greedy Decoding.
+- So with each token, it would score the probability of the output tokens, and it would simply choose the token with the highest probability - almost exactly like setting the temperature to zero.
+
+<img src="https://drive.google.com/uc?export=view&id=1GZdTLGN1zIXVhSZqgtDuj_Ed7KHqRUyp">
+
+- 
+
 
 ## ***11 - Recent Improvements***
 
