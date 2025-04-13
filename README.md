@@ -601,7 +601,18 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1GZdTLGN1zIXVhSZqgtDuj_Ed7KHqRUyp">
 
-- 
+- Now that we’ve done that, we can declare our prompt and pass it to the model.
+- This is the prompt we’re giving to the model - “Write an email apologizing to Sarah for the tragic gardening mishap. Explain how it happened.”
+- Let’s skip through to when it’s done generating, and talk about what it did in the process.
+- Obviously, it’s only allowed to generate 50 tokens, so we will likely only see the start of this email.
+
+<img src="https://drive.google.com/uc?export=view&id=18btWJo72SFavS2mML7P7LCjXVe9RTIeh">
+
+- We can change the prompt to whatever we like, and see how the model responds.
+- When the model is running on CPUs, it may take a few minutes to generate the response.
+- This is why, for example, in the industry a lot of these models run on inference-optimized GPUs.
+- A lot of the efficiency-oriented methods we’ve discussed are important in speeding up the text generation process - hence the focus on efficiency in research and in industry.
+
 
 
 ## ***11 - Recent Improvements***
