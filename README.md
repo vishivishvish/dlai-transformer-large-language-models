@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d586a49c-1d1e-443f-8bb9-a3c1287919a6)# **Transformer Large Language Models** 
+# **Transformer Large Language Models** 
 
 **[Deeplearning.ai](https://www.deeplearning.ai/short-courses/how-transformer-llms-work/)**
 
