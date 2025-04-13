@@ -583,10 +583,15 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1mV6XRR5FckdeWe39SqTCudZU1VhOHSxd">
 
-
-
-
 ## ***10 - Model Example***
+
+- We’ve learned so far about all the different components of the Transformer.
+- Now, it’s time for us to explore the architecture of one model example using the Hugging Face Transformers library.
+- We will take a quick look at the code of how Hugging Face Transformers allows us to look at the Transformer and its Tokenizer and the process we’ve learnt about happens - how the processing and flow of information happens from the tokenizer to the stack of Transformer Decoders to the element. And we’ll look at how that happens in code.
+- We’re going to be loading a language model - Phi-3-mini-4k-instruct, from Microsoft’s Phi-3 family.
+
+<img src="https://drive.google.com/uc?export=view&id=1JR3TtzXy5leNlykkSmaEO91z9c1hTjuR">
+
 
 ## ***11 - Recent Improvements***
 
