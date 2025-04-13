@@ -639,7 +639,11 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1ArhpEErrwEjM41a2dOBjle64UKSx2Ql4">
 
+- Let’s take a look at how that model_output looks like:
 
+<img src="https://drive.google.com/uc?export=view&id=1O7OVShhjH-dEe4B7zfwbcZabhDyY8uEL">
+
+- 
 
 ## ***11 - Recent Improvements***
 
