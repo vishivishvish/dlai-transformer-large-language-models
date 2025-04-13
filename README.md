@@ -622,7 +622,22 @@
 - Inside, we have two major components - the (model) itself, which is where all of the (layers) / the Transformer Blocks sit. 
 - We have the Tokens - the (embed_tokens) - also referred to as the Tokens Matrix, which is a matrix whose rows are each unique token (the token vocabulary size of 32064 in this model), and the columns are the dimensions of the embedding of each token (3072 dimensions here).
 - Inside (layers), we see that there are 32 Decoder Transformer layers, and we can see the exact component of each of them.
+- We have Self-Attention - (self_attn), the projection, the Rotary Embeddings, the MLP (Multi-Layer Perceptron or Feedforward Neural Network), we can see that it projects the 3072-dimension embeddings up to 16,384 dimensions, and eventually projects it down to 3072 dimensions again.
+- We use the SiLU activation function, which is x(1/(1+e-x)).
+- Towards the end of the model, we see the Language Modeling head, which takes in the 3072-dimensional vector that’s come out from the end of the process, and projects it up to a 32,064-dimensional vector, which contains a probability score assigned to each of the 32,064 tokens in the vocabulary on their likelihood of being the next token.
+- Hugging Face also makes it possible to do "model.model", so that allows us to go solely into the (model) part of the Phi3ForCausalLM object.
+- We can use this to address all of the sub-objects in the same fashion, such as model.model.embed_tokens for example.
+- We can access the first layer of the model by doing model.model.layers[0].
+- As opposed to the Hugging Face Pipeline method, which abstracted away all the low-level details, let us now try to access the Token Generation process of the model in a more involved manner, where we get to see the mechanics of the information generation process.
+- Let’s say our prompt is “The capital of France is”
+- First, we need to tokenize the input prompt and get the IDs of the tokens. That is done by:
 
+<img src="https://drive.google.com/uc?export=view&id=1ChbeU9I14QTwiMZiSj192MH4TZRS5yxX">
+
+- This input_ids variable will now contain a Tensor object of the input IDs of the tokens in the prompt “The capital of France is”.
+- This input_ids variable can be passed through the model and we can get the model output before the LM head, by using the same Hugging Face functions from before.
+
+<img src="https://drive.google.com/uc?export=view&id=1ArhpEErrwEjM41a2dOBjle64UKSx2Ql4">
 
 
 
