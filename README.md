@@ -670,6 +670,11 @@
 
 ## ***11 - Recent Improvements***
 
+- Now that we know how Transformer LLMs work, let’s look at a couple of more recent ideas that are part of the latest generation of models.
+
+<img src="https://drive.google.com/uc?export=view&id=1CiAnwMxFBm011fOzigJMs6z89hXZigg9">
+
+
 ## ***12 - Mixture-of-Experts (MoE)***
 
 ## ***13 - Conclusion***
