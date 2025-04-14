@@ -656,9 +656,17 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1nY3mcx8giCeKUQNDF5XzgxXa0tVgi2lw">
 
+- We see that this is now a tensor of shape [1,5,32064], meaning that for each of the 5 tokens (rows of this new matrix), there are 32,064 probability prediction scores - 1 for each token in the vocabulary - on the likelihood of that token in the vocabulary being the next token in the sequence.
+- But to get the actual output for the prompt we sent to the model, we are obviously only interested in the predictions for the last token of the input prompt - the 5th row in our above tensor matrix.
+- So we address that particular output, and in the manner of Greedy Decoding, we select the highest probability generation token for that last input token in the following manner - getting the Token ID first, and then separately decoding that Token ID to give us the actual token prediction.
 
+<img src="https://drive.google.com/uc?export=view&id=1-IUriEgGkK2AO4BwQGCg9w6iVteuXRoG">
 
-
+- This is fascinating for a couple of reasons.
+- In a sense, this is software that is able to now tell you information about the world.
+- But also, there’s another thing here - the models never really saw the text. They only see the lists of Token IDs, and they output these Token IDs as well.
+- The models never actually see the text, the level that we operate at, despite being so good at being able to predict the next token of text. So somehow, the models have understood a deeper intrinsic pattern of knowledge inside the text that allows them to operate flawlessly at the text level.
+- In the next section, we’ll look at some recent improvements to LLMs.
 
 ## ***11 - Recent Improvements***
 
