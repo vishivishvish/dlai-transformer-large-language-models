@@ -643,7 +643,22 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1O7OVShhjH-dEe4B7zfwbcZabhDyY8uEL">
 
-- 
+- On using the .shape attribute, we see that it’s a tensor with dimensions [1,5,3072] - 1 is the batch dimension, it’s 1 because we only passed the model one text input “The capital of France is” - in training, there’s a lot more batches. 
+- 5 is the number of tokens in the sequence, as we know.
+- 3072 is the dimension of the output vectors. 
+- This can be visualized from the following diagram from earlier.
+
+<img src="https://drive.google.com/uc?export=view&id=1VpXHsaXKAHDCPJ9nJvOpPatF1UCLNqUE">
+
+- The Block N Output that we see before the LM Head is the 3072-dimension output vector being referred to earlier.
+- There would be 5 such vectors of 3072 dimensions each.
+- We can take this tensor of dimensions [1,5,3072], pass this to the Language Modeling Head, and see what the output looks like.
+
+<img src="https://drive.google.com/uc?export=view&id=1nY3mcx8giCeKUQNDF5XzgxXa0tVgi2lw">
+
+
+
+
 
 ## ***11 - Recent Improvements***
 
