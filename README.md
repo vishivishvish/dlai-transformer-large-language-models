@@ -674,6 +674,29 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1CiAnwMxFBm011fOzigJMs6z89hXZigg9">
 
+- On the left is a simplified view of the Transformer.
+- This is a Transformer Decoder - an architecture of the original one from 2017.
+- The figure on the right (the diagram in the original Transformer paper from 2017) is a flipped version of the one on the left.
+- Positional Encoding is a method of applying positional information. Otherwise, it would be presented to the model as a Bag-of-Words, there would be no order to the words. And the order of words matters a lot in a sequence.
+- So Positional Encoding is one method - there are multiple methods of adding that positional information to the representation of vectors.
+- The original Transformer model was an Encoder-Decoder model. 
+- Most LLMs now in existence used to generate text are purely Decoder models, and do not have the Encoder component.
+
+<img src="https://drive.google.com/uc?export=view&id=1-ftGDeg9s3yTyV7Cka1GGjaTRM3tNiTH">
+
+- Encoder models are also in use, such as BERT and the models used for text embeddings and re-rankers, or other efficient, classification-oriented ways of doing NLP tasks that are not necessarily required to do Text Generation.
+- We can compare and contrast the 2017 Transformer Block with the 2024 Transformer Block (such as those used in the Llama 3 Model Family), and we would see that they are quite close to each other, with only a few important differences.
+
+<img src="https://drive.google.com/uc?export=view&id=1eb5cGazMyJvuA0ee6VOOodiW_5A8JOpp">
+
+- One change is that there’s no longer a Positional Encoding step at the beginning of the processing of the model in the 2024 Transformer Block.
+- We now use Rotary Embeddings - essentially positional information is now added at the Self-Attention level.
+- The Layer Normalization has moved before the Self-Attention and before the Feedforward Neural Network stages in the 2024 Transformer block, when in contrast, the Add and Normalize steps were after these stages in the 2017 version.
+- The rationale for these changes is that some experimental results showed the models performing better with this kind of setup.
+- In addition, as we see, the 2024 Transformer Block uses Grouped Query Attention in place of vanilla Multi-head Self-Attention.
+- One important thing to note, that was there in both the original Transformer architecture as well as the more modern version, is the presence of Residual Self-Connections, that repack the information from the beginning of the processing and add them to the representation at the end.
+
+
 
 ## ***12 - Mixture-of-Experts (MoE)***
 
