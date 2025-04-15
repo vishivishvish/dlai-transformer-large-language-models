@@ -727,6 +727,27 @@
 - RoPE adds the positional embedding in the above step of Self-Attention.
 - This is just before the Relevance Scoring step - the first of the two steps that Self-Attention does.
 - It basically has a formulation that adds that information to the Queries and Keys vectors.
+- And so, the vector rows in the Keys matrix on the right, have some information that tells that one vector comes before another vector, which comes before another vector, etc.
+- That information is present on the right, but not on the left, essentially.
+
+<img src="https://drive.google.com/uc?export=view&id=1Q-itSuTmQA1ZxqtKdsjZS7rZ6lSIJL3m">
+
+- One more recent development is the idea of Mixture of Experts (MoE) -  a concept that ensembles multiple sub-models to improve the quality of LLMs.
+- That’s not to say all LLMs are become Mixture-of-Experts models - we can think of this as a variant of Transformer Language Models, rather than replacing the Dense models we’ve covered in the program so far.
+- The idea behind Mixture-of-Experts (MoE) is that at each layer, you have multiple sub Neural Networks - each of which we call an “Expert”. 
+- A router in each of these layers, decides which expert should process this token / vector.
+- [Maarten Grootendorst’s visual guide to MoE](https://newsletter.maartengrootendorst.com/p/a-visual-guide-to-mixture-of-experts) is a detailed and highly illustrative explainer on the idea.
+
+<img src="https://drive.google.com/uc?export=view&id=1JClpquifmqUBX4izaWxRsqBl78ls_8al">
+
+- For the intuition of experts, it’s important not to think of each expert as being one monolithic component.
+- Each layer has its own set of experts.
+- Another important intuition is that these experts are not specialized in specific domains, like a psychology expert or a biology expert. 
+- Rather, these experts tend to focus on specific kinds of tokens, and how to process them best - such as punctuation or verbs or otherwise.
+
+<img src="https://drive.google.com/uc?export=view&id=1x29qVgU3ETB5h1TKytigK1rf8miwQCB3">
+
+
 
 
 ## ***12 - Mixture-of-Experts (MoE)***
