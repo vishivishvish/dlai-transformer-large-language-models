@@ -724,7 +724,10 @@
 
 <img src="https://drive.google.com/uc?export=view&id=12nfVzH4SZpgLAfnBMQxKZxIKHRCGsrdd">
 
-- 
+- RoPE adds the positional embedding in the above step of Self-Attention.
+- This is just before the Relevance Scoring step - the first of the two steps that Self-Attention does.
+- It basically has a formulation that adds that information to the Queries and Keys vectors.
+
 
 ## ***12 - Mixture-of-Experts (MoE)***
 
