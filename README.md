@@ -695,6 +695,27 @@
 - The rationale for these changes is that some experimental results showed the models performing better with this kind of setup.
 - In addition, as we see, the 2024 Transformer Block uses Grouped Query Attention in place of vanilla Multi-head Self-Attention.
 - One important thing to note, that was there in both the original Transformer architecture as well as the more modern version, is the presence of Residual Self-Connections, that repack the information from the beginning of the processing and add them to the representation at the end.
+- Before we get into Rotary Embeddings, let’s first talk about the LLM Training process.
+
+<img src="https://drive.google.com/uc?export=view&id=10WULaXkg9iywTcDmklI5S9nTeBXU3bJA">
+
+- As we know, LLMs are trained in multiple steps.
+- The first step is the Base Training, where it’s the next token prediction style generation, also called Language Modeling, which is of course why these models are called Language Modeling.
+- When we visualize it in our head, we might think of training in batches as following the format in the first diagram above.
+- Each row in the batch would contain one document. But if the model were to have a 16k context window, and Document 1 only takes up a small fraction of that space, so we would normally add padding to the rest of that context window.
+- If we were doing it naïvely, this is one of the first ways we might think about doing training - we would have documents like this, where the majority of the context is just padding that’s not really used.
+- This would be a very inefficient way to pack the training data - think of it like filling only 20% of a truck for each round trip from a warehouse to a retail store. 
+- In reality, a more efficient way to pack these documents for training is like the second figure, where you have multiple short documents which you pack into one row of your batch, and you do that with each row. This would require less padding in each row, meaning we would definitely at least use most of the training compute available, since the GPU is going to be doing that crunching regardless of whether it’s an actual document or it’s just padding.
+- This is a high-level side piece of information about how that training is done.
+- We say that because this also has an impact on the architecture - specifically with the Positional Encoding.
+- In the naïve method displayed in the first figure, we can say that for Token No. 1, I’ll always assign it with a positional vector that encodes that this is Position No. 1. And so on for Position No. 2, 3 and 4. 
+- You can have multiple of these static Positional Encoding methods - they can either be learned, or they can be algorithmic in terms of having some combination of Sine and Cosine functions with time, so that the model learns that this kind of information in a vector means that it’s referring to Position No. 1 or 2 or 3 etc.
+- That’s what’s called a Static Positional Encoding method.
+- There are other methods that are more Dynamic in that they denote that this token is three tokens before another token, for example.
+- In the second diagram, because there are multiple documents in the same row, the Self-Attention mechanism when it’s working on Document 2, should not be able to look at Document 1.
+- But that’s not a Positional Encoding property.
+- The Positional Encoding property that’s needed here is a way to allow it to say - okay, this is the first position of this document. 
+
 
 
 
