@@ -759,7 +759,13 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1UyFIgpgBZVTC1yY-_knxqCDu7bkyfIxj">
 
-- 
+- In addition to having these experts, the Mixture-of-Experts layer also has the router, which is basically a token-level classifier, that classifies that for this type of token, what is the best expert that is most suited for processing that token.
+
+<img src="https://drive.google.com/uc?export=view&id=1ZbqAzNZA47En9jeHctdP9YPqCXI-7icN">
+
+- We can think of the router as producing a Multi-class classification score, where the router has deemed that to process this token, it knows the Expert FFNN 1 will do the best job.
+- And that processing is how the Feedforward Neural Network is applied to this token in this processing step in the layer.
+- This was a high-level look at Mixture-of-Experts models - the next section will dive deeper into the mechanics of how they work.
 
 ## ***12 - Mixture-of-Experts (MoE)***
 
