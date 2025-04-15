@@ -715,9 +715,16 @@
 - In the second diagram, because there are multiple documents in the same row, the Self-Attention mechanism when it’s working on Document 2, should not be able to look at Document 1.
 - But that’s not a Positional Encoding property.
 - The Positional Encoding property that’s needed here is a way to allow it to say - okay, this is the first position of this document. 
+- So in the counting of which token, which position we are in the context length, you support a way in which the model can make sense that - okay, this is Token No. 1 in Document No. 2.
+- This is a bit of intuition around why a lot of the more recent models use Positional Encoding methods like Rotary Position Embeddings (RoPE).
 
+<img src="https://drive.google.com/uc?export=view&id=10XRtOOyRA4ecKDZCT3mJvOmQrG70VVLw">
 
+- We won’t discuss Rotary Position Embeddings in detail, but we can say that they add the Positional Information directly at the Self-Attention layer of each Transformer block.
 
+<img src="https://drive.google.com/uc?export=view&id=12nfVzH4SZpgLAfnBMQxKZxIKHRCGsrdd">
+
+- 
 
 ## ***12 - Mixture-of-Experts (MoE)***
 
