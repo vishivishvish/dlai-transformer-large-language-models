@@ -769,6 +769,25 @@
 
 ## ***12 - Mixture-of-Experts (MoE)***
 
+- Mixture-of-Experts is an exciting recent improvement to Transformer LLMs.
+- This technique extends Transformers by introducing dynamically chosen experts.
+- In this section, we will learn its two main components - the experts and the router.
+- Mixture-of-Experts changes parts of the Decoder block inside the Transformer model.
+- The input of a decoder is typically several factors representing the input tokens.
+- These are first Layer-Normalized, before they pass to the Attention mechanism.
+- We apply Masked Self-Attention to the inputs to weight tokens based on their relative importance in the context of all other tokens.
+- This output is aggregated together with the unprocessed inputs (the residual connection), creating both a direct and an indirect path.
+- This concludes one of the most important components of Transformer models - its Attention mechanism.
+- It prepares the input in such a way that more contextual information is stored in the vectors.
+- It is then Layer Normalized again, before it’s processed by a Feedforward Neural Network.
+- This FFNN component is typically one of the largest components of an LLM, since it attempts to find complex relationships in the information processed by the Attention mechanism.
+- The FFNN takes the inputs and processes it through one or more hidden layers.
+- This entire mechanism is called a Dense Network, since all the parameters of the network are activated and used.
+
+<img src="https://drive.google.com/uc?export=view&id=1HDJLuHRVtjis0_joX7KMZRA3o3IcXQ2V">
+
+
+
 ## ***13 - Conclusion***
 
 ***WIP - More Notes Coming!***
