@@ -747,8 +747,19 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1x29qVgU3ETB5h1TKytigK1rf8miwQCB3">
 
+- In the flow of using a Mixture-of-Experts model, you’re not assigned to one expert.
+- So if you’re assigned in Layer 1 to Expert 1, Layer 2 might use Expert 3 or Expert 4.
+- This routing happens at every layer. Each layer routes to the proper expert at that layer.
+- There are also methods that would route to two different experts in the same layer and merge the outputs together. So there are a couple of different methods of using these.
 
+<img src="https://drive.google.com/uc?export=view&id=1hAEJCJkJvUuUWVrpOso_Zr4srInEawCO">
 
+- But this is a high-level intuition.
+- The Experts actually sit at the Feedforward Network stage of the Transformer block - one FFN is basically replaced by many FFNs constituting the Mixture-of-Experts.
+
+<img src="https://drive.google.com/uc?export=view&id=1UyFIgpgBZVTC1yY-_knxqCDu7bkyfIxj">
+
+- 
 
 ## ***12 - Mixture-of-Experts (MoE)***
 
