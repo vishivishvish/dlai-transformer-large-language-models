@@ -815,6 +815,18 @@
 
 <img src="https://drive.google.com/uc?export=view&id=12ILQojKs_vz-ESl3CKQpik0X5VfkJNtD">
 
+- This aggregation process is typically a weighted mean. 
+- Experts that were given a higher probability by the router end up with a bigger say in the final output.
+- The Router together with the Experts are the two main components of the MoE layer.
+- Looking back at the Decoder, that means the earlier single FFNN can be replaced by multiple Expert FFNNs and the Router FFNN.
+- Although the technical implementation can be difficult, overfitting on a single expert can be the real challenge in such architectures.
+- A major benefit of Mixture-of-Experts is its Computational Requirements.
+- Although having multiple experts makes it seem as though the computational requirements would be higher, it is actually a bit more nuanced than that.
+- The parameters of an MoE model can be found in five different places.
+- First, the Input Embeddings. Second, the Masked Self-Attention. Third, the Router. Fourth, the Experts. Fifth, the Output Embeddings.
+
+<img src="https://drive.google.com/uc?export=view&id=1G3Pa8P8gdB__bNjepvoDT8iyej1nA_Og">
+
 - 
 
 ## ***13 - Conclusion***
