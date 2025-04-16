@@ -786,7 +786,29 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1HDJLuHRVtjis0_joX7KMZRA3o3IcXQ2V">
 
+- Mixture-of-Experts is a technique that relates to the FFNN component of the Transformer block.
+- Instead of a single FFNN, it has several networks that it can choose to use. Each network is called an Expert.
+- Experts are not specialized in a specific domain like Psychology or Biology, but rather they merely learn syntactical information on a token level - such as punctuations, verbs or conjunctions.
 
+<img src="https://drive.google.com/uc?export=view&id=1x_gA2OttiTcCEVaci4AnERfA7XXJLx_R">
+
+- The single FFNN from earlier now consists of four networks, each called an Expert.
+- When the input flows through this Expert layer, one or more Experts is selected that will process the input, and this means that the other Experts will be left unactivated.
+
+<img src="https://drive.google.com/uc?export=view&id=1fY9-OasKI69Amw7FRnCueWaDAgbAcfA_">
+
+- Hence, this is called a Sparse model, since only a subset of Experts is actually activated at any given time.
+- This is referred to as the Mixture-of-Experts (MoE) layer.
+- The MoE layer therefore consists of one or more experts, each an FFNN, that takes in the input data and selects an expert best suited for this particular input, in order to generate the output.
+- But how do we know which inputs should be routed to which expert?
+- That is where the Router comes in.
+- Its main job is to choose which inputs should go to which expert, like the experts.
+- The Router is an FFNN itself, but quite a bit smaller than the Expert FFNNs, since it doesn’t need to do anything more than simply route the inputs.
+- For each expert, the Router creates a probability score to indicate how likely it is that the expert is suited for that particular input.
+
+<img src="https://drive.google.com/uc?export=view&id=1V96MpXkg8ONiSAgEk_l8QRTjt-QGcmaf">
+
+- 
 
 ## ***13 - Conclusion***
 
