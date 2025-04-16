@@ -808,6 +808,13 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1V96MpXkg8ONiSAgEk_l8QRTjt-QGcmaf">
 
+- After creating the probability scores, one for each expert, the router selects the expert based on those scores. In the above example, given Expert 1 has the highest probability score, it would select Expert 1.
+- But this is only one strategy - selecting the Expert with the highest probability.
+- Other strategies do exist to introduce more creativity to the Expert selection process.
+- The final output can be selected based on the output of a single expert, or you can even choose multiple experts and aggregate their output.
+
+<img src="https://drive.google.com/uc?export=view&id=12ILQojKs_vz-ESl3CKQpik0X5VfkJNtD">
+
 - 
 
 ## ***13 - Conclusion***
