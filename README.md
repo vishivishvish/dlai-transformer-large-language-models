@@ -827,7 +827,30 @@
 
 <img src="https://drive.google.com/uc?export=view&id=1G3Pa8P8gdB__bNjepvoDT8iyej1nA_Og">
 
-- 
+- When we load a model, we need to load all the parameters into memory.
+- The parameters including all the Expert FFNN parameters are called the Sparse Parameters, since not all of them are activated during any single inference.
+- In contrast, the parameters that are actually used to run inference with MoE are called the Active Parameters, and they tend to be much smaller than the Sparse Parameter size.
+- So, the amount of memory needed to load in the Sparse Parameters of the model is relatively high, but memory requirements during inference are comparatively low since most experts aren’t used.
+- We can explore this with the example of Mixtral 8x7B - the first popular open-source MoE LLM.
+- As the name suggests, it has 8 experts, each with 7B parameters.
+- The shared parameters of Mixtral are those that are always used both when you load the model and when you run inference.
+- The largest number of parameters can be found in the Attention mechanism, with over 1B parameters. 
+- The router is a relatively small model, with only 32k parameters.
+- Mixtral has 8 experts - and each expert actually only has 5.6B parameters out of the 7B parameters (since the 7B includes the shared parameters as well - it’s a bit misleading) - so the experts have a total of 5.6 x 8 or around 45B Sparse Parameters.
+- This is the majority, but including the remaining 4 components, Mixtral 8x7B has around 46.7B Total Sparse Parameters while loading the model.
+- During inference however, in addition to the shared parameters, Mixtral only requires 2 expert FFNNs at any given time, or 5.6 x 2 = 11.3B Active Parameters.
+- Including the earlier shared parameters, Mixtral 8x7B only has around 12.8B Active Parameters.
+- This makes MoE models excellent when we run them in production in comparison to their size.
+
+<img src="https://drive.google.com/uc?export=view&id=1jw7R3ID2Jy2TvddhNbLH3pkZUvgHvg_w">
+
+- There are a number of Pros and Cons to the Mixture-of-Experts architecture.
+- Although you need a lot of GPU VRAM memory for loading the model, the VRAM actually required to run the model during inference is low.
+- There is a risk of overfitting on a single expert in the model, which requires careful balancing of the model, however its performance tends to be higher than traditional models, as the experts help remove redundancy in computations.
+- Finally, the architecture is more complex, which requires careful training, but it’s also flexible in nature in terms of the experts that are chosen and used.
+- Moreover, since the MoE layer is only relevant to the FFNN stage and not the Self-Attention stage, non-Transformer models can also have MoE layers.
+- So State Space Models like Mamba and Jamba offer an alternative to Transformer-based architectures by using MoE layers.
+- This makes MoE an interesting and useful architecture to use across the LLM space.
 
 ## ***13 - Conclusion***
 
