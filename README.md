@@ -854,4 +854,4 @@
 
 ## ***13 - Conclusion***
 
-***WIP - More Notes Coming!***
+**The End!**
